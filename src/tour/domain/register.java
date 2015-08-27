@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import tour.core.DBHelper;
+
 /**
  * Servlet implementation class register
  */
@@ -28,37 +30,15 @@ public class register extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 	}
-	
-	
-
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see Servlet#getServletConfig()
-	 */
-	public ServletConfig getServletConfig() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	/**
-	 * @see Servlet#getServletInfo()
-	 */
-	public String getServletInfo() {
-		// TODO Auto-generated method stub
-		return null; 
-	}
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		DBHelper dbHelper=new DBHelper();
+		dbHelper.open();
+		dbHelper.close();
 	}
 
 	/**
@@ -75,41 +55,6 @@ public class register extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
-
-	/**
-	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doHead(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doHead(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doOptions(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doOptions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doTrace(HttpServletRequest, HttpServletResponse)
-	 */
-	protected void doTrace(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }
